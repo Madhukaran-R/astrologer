@@ -1,10 +1,14 @@
 from flask import Flask,send_from_directory,jsonify
+
+
 app = Flask(__name__,
             static_folder = "./frontend/build",
             static_url_path="/",
             )
 
 @app.route('/')
+@app.route('/about')
+@app.route('/<path:path>')
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
