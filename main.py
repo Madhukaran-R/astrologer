@@ -1,16 +1,24 @@
-from flask import Flask,send_from_directory,jsonify
-
+from flask import Flask,send_from_directory,jsonify,request,make_response
+from Backend import API
+from Auth import AUTH
+from flask_cors import CORS
 
 app = Flask(__name__,
             static_folder = "./frontend/build",
             static_url_path="/",
             )
 
+app.register_blueprint(API,url_prefix='/api')
+app.register_blueprint(AUTH,url_prefix='/auth')
+
+CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "http://localhost:3000"},})
+
 @app.route('/')
 @app.route('/about')
 @app.route('/<path:path>')
 def serve():
-    return send_from_directory(app.static_folder, 'index.html')
+    resp = make_response(send_from_directory(app.static_folder, 'index.html'))
+    return resp
 
 
 @app.errorhandler(404)
