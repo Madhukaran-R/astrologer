@@ -1,0 +1,6 @@
+{
+  "python.envFile": "/home/madhukaran/anaconda3/envs/astrologger/bin",
+  "python.defaultInterpreterPath": "/home/madhukaran/anaconda3/envs/astrologger/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
