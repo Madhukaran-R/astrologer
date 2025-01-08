@@ -1,78 +1,37 @@
 import React from "react";
+import StarryBackground from "../components/staryBackground";
+// import Paper from "@mui/material/Paper";
+import SwipeUpIcon from "@mui/icons-material/SwipeUp";
+import { Divider } from "@mui/material";
 
-const SvgComponent = () => {
-  return (
-    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-      <line
-        x1="5"
-        y1="50"
-        x2="130"
-        y2="50"
-        stroke="#8B4513"
-        stroke-width="2"
-        stroke-linecap="round"
-      />
-
-      <circle cx="5" cy="50" r="3" fill="#FFD700" />
-
-      <circle cx="130" cy="50" r="3" fill="#FFD700" />
-
-      <text
-        x="20"
-        y="45"
-        fontSize="20"
-        fill="#7800af"
-        className="heading"
-      >
-        Astrologger !
-      </text>
-
-      <circle cx="10" cy="25" r="2" fill="#FFD700" />
-      <circle cx="20" cy="60" r="2" fill="#FFD700" />
-      <circle cx="120" cy="60" r="2" fill="#FFD700" />
-      <circle cx="125" cy="25" r="2" fill="#FFD700" />
-      <line x1="10" y1="25" x2="20" y2="60" stroke="#FFD700" stroke-width="1" />
-      <line
-        x1="20"
-        y1="60"
-        x2="120"
-        y2="60"
-        stroke="#FFD700"
-        stroke-width="1"
-      />
-      <line
-        x1="120"
-        y1="60"
-        x2="125"
-        y2="25"
-        stroke="#FFD700"
-        stroke-width="1"
-      />
-    </svg>
-  );
-};
-
-{
-  /* <text x="100" y="50" fontSize="10" textAnchor="middle" fill="#7800af" className="heading">
-Astrologger !
-</text> */
-}
 const Home = () => {
   return (
-    <div>
+    <div style={{ padding: "0 10px" }}>
+      <StarryBackground />
       <div
         style={{
           textAlign: "center",
           justifyContent: "center",
           display: "flex",
           flexDirection: "column",
-          height: "80vh",
+          height: "100vh",
+          margin: "5px",
         }}
       >
-        {/* <h1 className="heading">Astrologger !</h1> */}
-        <SvgComponent />
+        <div className="heading-container">
+          <h1 className="heading">Astrologger</h1>
+          <Divider className="divider" />
+          <p className="sub-heading">
+            Written in the stars, guided by the cosmos—discover the path the
+            universe has crafted for you.
+          </p>
+        </div>
+
+        <span className="swipe-up">
+          <SwipeUpIcon className="icon" /> Swipe Up
+        </span>
       </div>
-      <div></div>
+      {/* <Paper elevation={3} style={{ height: "250px" }}></Paper> */}
     </div>
   );
 };
