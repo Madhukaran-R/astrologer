@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0036bc0f.css",
-    "main.js": "/static/js/main.7d656022.js",
-    "static/js/488.e75445ad.chunk.js": "/static/js/488.e75445ad.chunk.js",
-    "static/media/RubikMicrobe-Regular.ttf": "/static/media/RubikMicrobe-Regular.f0ba24195e570af1f7e5.ttf",
-    "static/media/LavishlyYours-Regular.ttf": "/static/media/LavishlyYours-Regular.0b55df0b1c0cb5aa7bf0.ttf",
-    "static/media/Quintessential-Regular.ttf": "/static/media/Quintessential-Regular.80b1583bb6be49192fa3.ttf",
-    "index.html": "/index.html",
-    "main.0036bc0f.css.map": "/static/css/main.0036bc0f.css.map",
-    "main.7d656022.js.map": "/static/js/main.7d656022.js.map",
-    "488.e75445ad.chunk.js.map": "/static/js/488.e75445ad.chunk.js.map"
+    "main.css": "/astrologer/static/css/main.d178c82d.css",
+    "main.js": "/astrologer/static/js/main.cedb38a3.js",
+    "static/js/488.e75445ad.chunk.js": "/astrologer/static/js/488.e75445ad.chunk.js",
+    "static/media/RubikMicrobe-Regular.ttf": "/astrologer/static/media/RubikMicrobe-Regular.f0ba24195e570af1f7e5.ttf",
+    "static/media/LavishlyYours-Regular.ttf": "/astrologer/static/media/LavishlyYours-Regular.0b55df0b1c0cb5aa7bf0.ttf",
+    "static/media/Quintessential-Regular.ttf": "/astrologer/static/media/Quintessential-Regular.80b1583bb6be49192fa3.ttf",
+    "index.html": "/astrologer/index.html",
+    "main.d178c82d.css.map": "/astrologer/static/css/main.d178c82d.css.map",
+    "main.cedb38a3.js.map": "/astrologer/static/js/main.cedb38a3.js.map",
+    "488.e75445ad.chunk.js.map": "/astrologer/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0036bc0f.css",
-    "static/js/main.7d656022.js"
+    "static/css/main.d178c82d.css",
+    "static/js/main.cedb38a3.js"
   ]
 }

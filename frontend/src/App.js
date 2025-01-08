@@ -6,7 +6,7 @@ import About from "./pages/about";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/astrologer">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
