@@ -3,11 +3,13 @@
   src: local("Rubik Microbe"),
     url("./fonts/RubikMicrobe-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Lavishly Yours";
   src: local("Lavishly Yours"),
     url("./fonts/LavishlyYours-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Quintessential";
   src: local("Quintessential"),
@@ -49,9 +51,11 @@
   background: #480069;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #2c014e;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -84,6 +88,7 @@
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
@@ -94,9 +99,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -107,6 +114,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -143,7 +151,7 @@
 .topbar-container {
   display: flex;
   gap: 20px;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   justify-content: flex-end;
   align-items: center;
   color: white;
@@ -156,6 +164,10 @@
   color: white;
 }
 
+.section-2 {
+  height: 350px;
+}
+
 @media screen and (max-width: 600px) {
   .heading {
     font-size: 3.5rem;
@@ -164,6 +176,7 @@
   .divider {
     width: 100%;
   }
+
   .heading-container .sub-heading {
     font-size: 1.5rem;
   }

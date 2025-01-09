@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import StarryBackground from "../components/staryBackground";
-// import Paper from "@mui/material/Paper";
 import SwipeUpIcon from "@mui/icons-material/SwipeUp";
 import { Divider } from "@mui/material";
+import AstroButton from "../components/AstroButton";
+import LoginIcon from "@mui/icons-material/Login";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 const Home = () => {
+  const targetRef = useRef(null);
+
+  const handleSwipeUp = () => {
+    targetRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div style={{ padding: "0 10px" }}>
       <StarryBackground />
@@ -25,13 +33,19 @@ const Home = () => {
             Written in the stars, guided by the cosmos—discover the path the
             universe has crafted for you.
           </p>
+          <div className="topbar-container">
+            <AstroButton title="Generate Kundli" icon={<FileDownloadIcon />} />
+            <AstroButton title="Login" icon={<LoginIcon />} />
+          </div>
         </div>
 
         <span className="swipe-up">
-          <SwipeUpIcon className="icon" /> Swipe Up
+          <SwipeUpIcon className="icon" onClick={handleSwipeUp} /> Swipe Up
         </span>
       </div>
-      {/* <Paper elevation={3} style={{ height: "250px" }}></Paper> */}
+      <div ref={targetRef} className="section-2">
+
+      </div>
     </div>
   );
 };
