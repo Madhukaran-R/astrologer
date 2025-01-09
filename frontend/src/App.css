@@ -200,8 +200,40 @@
 .section-2 .content-image {
   width: 50%;
   object-fit: cover;
-  background-color: #8174A0;
+  background-color: #8174a0;
   border-radius: 10px;
+}
+
+.footer {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 50px;
+  font-family: "Quintessential", sans-serif;
+}
+
+.footer .sub-heading {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.astro-image {
+  object-fit: fill;
+  z-index: -1;
+  animation: rotate 120s linear infinite;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* rotate animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 600px) {
