@@ -165,7 +165,43 @@
 }
 
 .section-2 {
-  height: 350px;
+  display: flex;
+  min-height: 450px;
+  /* border-top: 3px solid #480069;
+  border-bottom: 3px solid #480069; */
+  margin: 5px;
+}
+
+.section-2 .heading {
+  font-size: 3.5rem;
+  color: #480069;
+  font-family: "Rubik Microbe", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section-2 .sub-heading {
+  font-family: "Quintessential", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.section-2 .content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.section-2 .content-image {
+  width: 50%;
+  object-fit: cover;
+  background-color: #8174A0;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
