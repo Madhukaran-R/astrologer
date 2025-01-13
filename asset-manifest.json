@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/astrologer/static/css/main.d619d80c.css",
+    "main.css": "/astrologer/static/css/main.aedda4f9.css",
     "main.js": "/astrologer/static/js/main.bc669578.js",
     "static/js/488.e75445ad.chunk.js": "/astrologer/static/js/488.e75445ad.chunk.js",
     "static/media/RubikMicrobe-Regular.ttf": "/astrologer/static/media/RubikMicrobe-Regular.f0ba24195e570af1f7e5.ttf",
@@ -8,12 +8,12 @@
     "static/media/LavishlyYours-Regular.ttf": "/astrologer/static/media/LavishlyYours-Regular.0b55df0b1c0cb5aa7bf0.ttf",
     "static/media/Quintessential-Regular.ttf": "/astrologer/static/media/Quintessential-Regular.80b1583bb6be49192fa3.ttf",
     "index.html": "/astrologer/index.html",
-    "main.d619d80c.css.map": "/astrologer/static/css/main.d619d80c.css.map",
+    "main.aedda4f9.css.map": "/astrologer/static/css/main.aedda4f9.css.map",
     "main.bc669578.js.map": "/astrologer/static/js/main.bc669578.js.map",
     "488.e75445ad.chunk.js.map": "/astrologer/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d619d80c.css",
+    "static/css/main.aedda4f9.css",
     "static/js/main.bc669578.js"
   ]
 }
