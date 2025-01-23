@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/astrologer/static/css/main.34d1d113.css",
-    "main.js": "/astrologer/static/js/main.3578cc9d.js",
+    "main.css": "/astrologer/static/css/main.ed49cedd.css",
+    "main.js": "/astrologer/static/js/main.b62e9114.js",
     "static/js/488.e75445ad.chunk.js": "/astrologer/static/js/488.e75445ad.chunk.js",
     "static/media/RubikMicrobe-Regular.ttf": "/astrologer/static/media/RubikMicrobe-Regular.f0ba24195e570af1f7e5.ttf",
-    "static/media/astrology.jpeg": "/astrologer/static/media/astrology.b0fb3fab4caddba26370.jpeg",
+    "static/media/Mukta-Regular.ttf": "/astrologer/static/media/Mukta-Regular.044d4dd07d7636695eda.ttf",
     "static/media/LavishlyYours-Regular.ttf": "/astrologer/static/media/LavishlyYours-Regular.0b55df0b1c0cb5aa7bf0.ttf",
     "static/media/Quintessential-Regular.ttf": "/astrologer/static/media/Quintessential-Regular.80b1583bb6be49192fa3.ttf",
     "index.html": "/astrologer/index.html",
-    "main.34d1d113.css.map": "/astrologer/static/css/main.34d1d113.css.map",
-    "main.3578cc9d.js.map": "/astrologer/static/js/main.3578cc9d.js.map",
+    "main.ed49cedd.css.map": "/astrologer/static/css/main.ed49cedd.css.map",
+    "main.b62e9114.js.map": "/astrologer/static/js/main.b62e9114.js.map",
     "488.e75445ad.chunk.js.map": "/astrologer/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34d1d113.css",
-    "static/js/main.3578cc9d.js"
+    "static/css/main.ed49cedd.css",
+    "static/js/main.b62e9114.js"
   ]
 }
