@@ -16,34 +16,51 @@
     url("./fonts/Quintessential-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Mukta Regular";
+  src: local("Mukta Regular"), url("./fonts/Mukta-Regular.ttf");
+}
+
+.AppContainer {
+  font-family: "Mukta Regular", sans-serif !important;
+}
+
+
+
 .heading {
-  font-family: "Rubik Microbe", sans-serif;
   font-size: 6.5rem;
   font-weight: 400;
   color: #7800af;
   /* animation: typing 3s steps(30) 1s 1 normal both; */
   overflow: hidden;
   margin: 0;
+  z-index: 1;
 }
 
-.heading-container {
+.content-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 20px;
 }
 
-.heading-container .sub-heading {
-  font-family: "Lavishly Yours", sans-serif;
-  font-size: 2.5rem;
-  color: #480069;
+.content-container .sub-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .divider {
-  width: 800px;
-  height: 3px;
+  width: 100%;
+  height: 1px;
   background-color: #480069;
 }
 
@@ -120,16 +137,31 @@
   }
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 500px;
+  background-color: rgb(255, 255, 168);
+}
+
 /* need in bottom center */
 .swipe-up {
   position: absolute;
-  bottom: 50px;
-  right: 50%;
+  bottom: 10px;
+  right: 10px;
   transform: translateX(50%);
-  color: white;
   animation: jump 1s infinite;
   font-family: "Quintessential", sans-serif;
   font-size: 1.5rem;
+  background-color: rgb(255, 255, 168);
+}
+
+.cross-banner {
+  height: 150px;
+  background-color: black;
 }
 
 .swipe-up .icon {
@@ -137,8 +169,7 @@
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  background-color: #480069;
-  color: white;
+  background-color: rgb(255, 255, 168);
   border: none;
   border-radius: 50%;
   padding: 10px;
@@ -148,81 +179,95 @@
   clip-path: polygon(10% 10%, 90% 5%, 85% 90%, 15% 85%);
 }
 
-.topbar-container {
+.footer-container {
   display: flex;
-  gap: 20px;
-  /* padding: 10px 20px; */
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-}
-
-.topbar-container h1 {
-  font-family: "Rubik Microbe", sans-serif;
-  font-size: 2rem;
-  margin: 0;
-  color: white;
-}
-
-.section-2 {
-  display: flex;
-  min-height: 450px;
-  /* border-top: 3px solid #480069;
-  border-bottom: 3px solid #480069; */
-  margin: 5px;
-}
-
-.section-2 .heading {
-  font-size: 3.5rem;
-  color: #480069;
-  font-family: "Rubik Microbe", sans-serif;
-  font-weight: 400;
-  margin: 0;
-}
-
-.section-2 .sub-heading {
-  font-family: "Quintessential", sans-serif;
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin: 0;
-}
-
-.section-2 .content {
-  display: flex;
-  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  gap: 20px;
-}
-
-.section-2 .content-image {
-  width: 50%;
-  object-fit: cover;
-  background-color: #8174a0;
-  border-radius: 10px;
-}
-
-.footer {
-  justify-content: center;
-  align-items: center;
   color: white;
-  height: 50px;
-  font-family: "Quintessential", sans-serif;
+  background-color: black;
 }
 
-.footer .sub-heading {
+.footer-container .footer-content .footer-quick-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-container .footer-content .footer-quick-links .quicklink {
+  min-height: 350px;
+  flex-grow: 1;
+}
+
+.quicklink b {
+  text-align: center;
+}
+
+.quicklink li {
+  margin: 2px;
+  margin-inline-start: 0;
+}
+
+.quicklink li svg {
+  height: 15px;
+  display: none;
+}
+
+.quicklink li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  word-spacing: 5px;
+}
+
+.quicklink li:hover svg {
+  display: inline-block;
+}
+
+
+.footer-container .footer-content {
+  width: 90vw;
+}
+
+.quick-link-horoscopes {
+  list-style-type: none;
+  margin-inline-start: 0;
+}
+
+.footer-container .copyright {
+  border-top: 1px solid white;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.footer-container .sub-heading {
   font-size: 1rem;
   margin: 0;
+}
+
+.footer-container .heading {
+  color: #fff;
 }
 
 .astro-image {
   object-fit: fill;
   z-index: -1;
   animation: rotate 120s linear infinite;
-  border-radius: 50%;
+  border-radius: 100%;
+  position: relative;
+  mix-blend-mode: hard-light;
+  left: 40%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.astro-image-container {
   position: absolute;
+  width: -webkit-fill-available;
+  overflow: hidden;
+  /* Keeps the image behind the text */
 }
 
 /* rotate animation */
@@ -249,7 +294,123 @@
     font-size: 1.5rem;
   }
 
-  .topbar-container {
-    justify-content: space-between;
+  .topbar-right {
+    display: none;
   }
+
+  .topbar-left .menu-icon {
+    display: block !important;
+  }
+
+}
+
+
+/* TOPBAR */
+.topbar {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1000;
+}
+
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.topbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.topbar-right .topbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item.active {
+  font-weight: bold;
+}
+
+.menu-item.active:hover {
+  text-decoration: none;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item:first-child {
+  margin-left: 0;
+}
+
+.menu-item.active {
+  color: #f50057;
+}
+
+.section-2 {
+  display: flex;
+  min-height: 450px;
+  margin: 5px;
+}
+
+.section-2 .heading {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section-2 .sub-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.section-2 .content {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.section-2 .content-image {
+  width: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-item.active:hover {
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-left .menu-icon {
+  display: none;
 }
