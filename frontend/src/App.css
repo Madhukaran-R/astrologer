@@ -140,11 +140,9 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 20px;
   height: 500px;
-  background-color: rgb(255, 255, 168);
 }
 
 /* need in bottom center */
@@ -413,4 +411,52 @@
 
 .topbar-left .menu-icon {
   display: none;
+}
+
+.drawer-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+  width: 200px;
+}
+
+.drawer-item {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.form-container .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .a_btn {
+  background-color: rgb(255, 255, 168);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.form-container .a_btn:hover {
+  animation: jump 0.5s;
+}
+
+.form-container form {
+  padding: 20px;
+}
+
+.form-container form .input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
 }

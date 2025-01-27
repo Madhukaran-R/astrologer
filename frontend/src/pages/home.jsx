@@ -1,14 +1,17 @@
-import React, { useRef } from "react";
-import SwipeUpIcon from "@mui/icons-material/SwipeUp";
-import { Divider } from "@mui/material";
+import React, { useState, useRef } from "react";
+// import SwipeUpIcon from "@mui/icons-material/SwipeUp";
+import { Button, Divider, TextField } from "@mui/material";
+
 
 
 const Home = () => {
   const targetRef = useRef(null);
 
-  const handleSwipeUp = () => {
-    targetRef.current.scrollIntoView({ behavior: "smooth" });
-  };
+  const [currentform, setCurrentForm] = useState(0);
+
+  // const handleSwipeUp = () => {
+  //   targetRef.current.scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
     <>
@@ -27,6 +30,12 @@ const Home = () => {
         </p>
       </div>
       <div className="form-container" ref={targetRef}>
+        <div className="button-group">
+          <Button variant="contained" className="a_btn" onClick={() => setCurrentForm(0)}>New Kundli</Button>
+          <Button variant="contained" className="a_btn" onClick={() => setCurrentForm(1)}>Saved Kundli</Button>
+        </div>
+        {currentform === 0 && <FormA />}
+        {currentform === 1 && <FormB />}
       </div>
       <div className="cross-banner">
       </div>
@@ -76,10 +85,93 @@ const Home = () => {
           To get your online Janam Kundli, Kundli prediction, and kundali reading, you can either chat with our astrologer or talk to our astrologer. For free online Kundli making, you can also visit the free Janam Kundli chart option and get a personalised free Janam kundali for yourself by our Janam Kundli maker software. You can get free kundali check and free Kundli prediction.
         </p>
       </div>
-      <div className="swipe-up" onClick={handleSwipeUp}>
+      {/* <div className="swipe-up" onClick={handleSwipeUp}>
         <SwipeUpIcon className="icon" /> Swipe Up
-      </div>
+      </div> */}
     </>
+  );
+};
+
+
+const FormA = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form A submitted!");
+  };
+
+  //   Kundli Name (String max: 128)
+  // Date & Time of Birth (date picker with time)
+  // Place of birth (Map search API is required. Will get back)
+  // Language dropdown (English, Hindi, Tamil)
+  // Gender (Male/Female)
+  // Chart style (North indian, South indian)
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <TextField
+        className="input"
+        id="demo-helper-text-misaligned"
+        label="Name"
+        size="small"
+      />
+      <TextField
+        className="input"
+        helperText="Please select your date of birth"
+        id="demo-helper-text-misaligned"
+        // label="Name"
+        size="small"
+        type="datetime-local"
+      />
+      <TextField
+        className="input"
+        id="demo-helper-text-misaligned"
+        label="Place of Birth"
+        size="small"
+      />
+      <TextField
+        className="input"
+        id="demo-helper-text-misaligned"
+        label="Language"
+        size="small"
+      />
+      <TextField
+        className="input"
+        id="demo-helper-text-misaligned"
+        label="Gender"
+        size="small"
+      />
+      <TextField
+        className="input"
+        id="demo-helper-text-misaligned"
+        label="Kundli Style"
+        size="small"
+      />
+      <Button type="submit" className="a_btn">Generate Kundli</Button>
+    </form>
+  );
+};
+
+const FormB = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form A submitted!");
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <h2>Form B</h2>
+      <label>
+        Name:
+        <input type="text" name="name" required />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input type="email" name="email" required />
+      </label>
+      <br />
+      <button type="submit">Submit Form A</button>
+    </form>
   );
 };
 
