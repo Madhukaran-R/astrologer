@@ -1,20 +1,16 @@
-import React, { useState, useRef } from "react";
-// import SwipeUpIcon from "@mui/icons-material/SwipeUp";
+import React, { useRef, useContext } from "react";
 import { Button, Divider, TextField } from "@mui/material";
+import { UserContext } from "../App";
+// import { useNavigate } from 'react-router-dom';
 
 
 
-const Home = () => {
+const Home = (props) => {
+  const userContext = useContext(UserContext);
   const targetRef = useRef(null);
 
-  const [currentform, setCurrentForm] = useState(0);
-
-  // const handleSwipeUp = () => {
-  //   targetRef.current.scrollIntoView({ behavior: "smooth" });
-  // };
-
   return (
-    <>
+    <div className="home">
       <div className="title-container">
         <h1>Astrologger</h1>
         <p>Get Instant & accurate, Janam kundli</p>
@@ -30,12 +26,10 @@ const Home = () => {
         </p>
       </div>
       <div className="form-container" ref={targetRef}>
-        <div className="button-group">
-          <Button variant="contained" className="a_btn" onClick={() => setCurrentForm(0)}>New Kundli</Button>
-          <Button variant="contained" className="a_btn" onClick={() => setCurrentForm(1)}>Saved Kundli</Button>
+        <div className="form-group">
+          <FormA {...props} logindetails={userContext} />
+          <FormB {...props} logindetails={userContext} />
         </div>
-        {currentform === 0 && <FormA />}
-        {currentform === 1 && <FormB />}
       </div>
       <div className="cross-banner">
       </div>
@@ -85,29 +79,23 @@ const Home = () => {
           To get your online Janam Kundli, Kundli prediction, and kundali reading, you can either chat with our astrologer or talk to our astrologer. For free online Kundli making, you can also visit the free Janam Kundli chart option and get a personalised free Janam kundali for yourself by our Janam Kundli maker software. You can get free kundali check and free Kundli prediction.
         </p>
       </div>
-      {/* <div className="swipe-up" onClick={handleSwipeUp}>
-        <SwipeUpIcon className="icon" /> Swipe Up
-      </div> */}
-    </>
+    </div>
   );
 };
 
 
-const FormA = () => {
+const FormA = (props) => {
+  // const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form A submitted!");
   };
 
-  //   Kundli Name (String max: 128)
-  // Date & Time of Birth (date picker with time)
-  // Place of birth (Map search API is required. Will get back)
-  // Language dropdown (English, Hindi, Tamil)
-  // Gender (Male/Female)
-  // Chart style (North indian, South indian)
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="formA" onSubmit={handleSubmit}>
+      <label>New Kundli</label>
+      <br />
       <TextField
         className="input"
         id="demo-helper-text-misaligned"
@@ -147,30 +135,35 @@ const FormA = () => {
         size="small"
       />
       <Button type="submit" className="a_btn">Generate Kundli</Button>
-    </form>
+      {/* <Button id="form_b_btn" variant="text" onClick={() => navigate("/saved-kundli")}>Download Saved Kundli</Button> */}
+    </form >
   );
 };
 
-const FormB = () => {
+const FormB = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form A submitted!");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Form B</h2>
-      <label>
-        Name:
-        <input type="text" name="name" required />
-      </label>
+    <form className="formB" onSubmit={handleSubmit}>
+      <label>Saved Kundli</label>
       <br />
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
-      <br />
-      <button type="submit">Submit Form A</button>
+      {props.logindetails._currentValue.loggedIn === false ? <div className="form_content_login">
+        <p>Please login to check your saved horoscope!</p>
+        <button className="a_btn" type="button" onClick={props.logindetails._currentValue.Login}>Login</button>
+      </div> : <div className="saved_kundli">
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+        <div className="kundli"></div>
+      </div>}
     </form>
   );
 };

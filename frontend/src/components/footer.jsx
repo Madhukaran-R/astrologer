@@ -1,7 +1,11 @@
 import React from "react";
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useNavigate } from 'react-router-dom';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer = (props) => {
     return (
@@ -28,6 +32,13 @@ const Footer = (props) => {
                             <LauchText text={"2024"} link={"/year/2024"} />
                             <LauchText text={"2023"} link={"/year/2023"} />
                         </ul>
+                        <b>Other Links</b>
+                        <ul className="quick-link-horoscopes">
+                            <LauchText text={"Horoscope 2024"} link={"/year/2025"} />
+                            <LauchText text={"Today's Horoscope"} link={"/year/2024"} />
+                            <LauchText text={"Today's Love Horoscope"} link={"/year/2023"} />
+                            <LauchText text={"Yesterday's Horoscope"} link={"/year/2023"} />
+                        </ul>
                     </div>
                     <div className="quicklink">
                         <b>Horoscopes Quick Links</b>
@@ -47,6 +58,28 @@ const Footer = (props) => {
                         </ul>
                     </div>
                     <div className="quicklink">
+                        <b>Kundli</b>
+                        <ul className="quick-link-horoscopes">
+                            <LauchText text={"Generate Kundli"} link={"/kundli"} />
+                            <LauchText text={"Saved Kundli"} link={"/saved-kundli"} />
+                            <LauchText text={"Kundli Matching"} link={"/kundli-matching"} />
+                            <LauchText text={"Kundli Analysis"} link={"/kundli-analysis"} />
+                            <LauchText text={"Kundli Reading"} link={"/kundli-reading"} />
+                            <LauchText text={"Kundli in Hindi"} link={"/kundli-in-hindi"} />
+                            <LauchText text={"Kundli in English"} link={"/kundli-in-english"} />
+                            <LauchText text={"Kundli in Tamil"} link={"/kundli-in-tamil"} />
+                            <LauchText text={"Kundli in Telugu"} link={"/kundli-in-telugu"} />
+                            <LauchText text={"Kundli in Kannada"} link={"/kundli-in-kannada"} />
+                        </ul>
+                    </div>
+                    <div className="quicklink">
+                        <b>SocialMedia Links</b>
+                        <br></br>
+                        <InstagramIcon titleAccess="Instagram" />
+                        <XIcon titleAccess="X" />
+                        <ConnectWithoutContactIcon titleAccess="Contact" />
+                        <LinkedInIcon titleAccess="LinkedIN" />
+                        <FacebookIcon titleAccess="Facebook" />
                     </div>
                 </div>
             </div>
