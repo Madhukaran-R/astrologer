@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 app = Flask(__name__,
             static_folder = "./frontend/build",
-            static_url_path="/",
+            static_url_path="/astrologer",
             )
 
 app.register_blueprint(API,url_prefix='/api')
@@ -16,6 +16,7 @@ CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "http://l
 @app.route('/')
 @app.route('/about')
 @app.route('/<path:path>')
+@app.route('/astrologer')
 def serve():
     resp = make_response(send_from_directory(app.static_folder, 'index.html'))
     return resp

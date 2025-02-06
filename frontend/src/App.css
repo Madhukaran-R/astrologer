@@ -228,7 +228,7 @@
 }
 
 .quicklink li:hover svg {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 

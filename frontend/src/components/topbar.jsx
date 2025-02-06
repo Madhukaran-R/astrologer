@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
-import { Button, SwipeableDrawer } from "@mui/material";
+import { SwipeableDrawer } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from "../App";
 
@@ -28,10 +28,10 @@ function Topbar() {
                         <li className="menu-item" onClick={() => goto("/about")}>About</li>
                         <li className="menu-item" onClick={() => goto("/services")}>Services</li>
                         <li className="menu-item" onClick={() => goto("/contact")}>Contact</li>
-                        <li>
+                        <li className="menu-item">
                             {loginDetails._currentValue.loggedIn === false ?
-                                <Button size="small" className="a_btn" onClick={loginDetails._currentValue.Login}>Login</Button> :
-                                <Button size="small" className="a_btn" onClick={loginDetails._currentValue.Logout}>Logout</Button>}
+                                <span onClick={loginDetails._currentValue.Login}>Login</span> :
+                                <span onClick={loginDetails._currentValue.Logout}>Logout</span>}
                         </li>
                     </ul>
                 </div>
@@ -45,28 +45,13 @@ function Topbar() {
                     <li className="drawer-item" onClick={() => goto("/saved-kundli")}>Saved Kundli</li>
                     <li className="drawer-item">
                         {loginDetails._currentValue.loggedIn === false ?
-                            <Button size="small" className="a_btn" onClick={loginDetails._currentValue.Login}>Login</Button> :
-                            <Button size="small" className="a_btn" onClick={loginDetails._currentValue.Logout}>Logout</Button>}
+                            <span onClick={loginDetails._currentValue.Login}>Login</span> :
+                            <span onClick={loginDetails._currentValue.Logout}>Logout</span>}
                     </li>
                 </ul>
             </SwipeableDrawer>
         </div>
     );
 }
-
-// css from drawer item
-// .drawer-menu {
-//     list-style-type: none;
-//     padding: 0;
-//     margin: 0;
-//     width: 200px;
-// }
-
-// .drawer-item {
-//     padding: 10px;
-//     cursor: pointer;
-// }
-
-
 
 export default Topbar;
