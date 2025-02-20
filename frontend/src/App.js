@@ -6,9 +6,32 @@ import About from "./pages/about";
 import { createContext, useEffect, useState } from "react";
 import { PostAPICall } from "./utils/network";
 import { Backdrop, CircularProgress } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export const UserContext = createContext();
 
+// , #f0df20, #4b4737, #b0ab99
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#f0df20",
+      dark: "#d4c11a",
+      light: "#f8e74d",
+      contrastText: "#000",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            backgroundColor: "#d4c11a",
+          },
+        },
+      },
+    },
+  },
+});
 function App() {
   const [login, setLogin] = useState(false);
   const [loader, setLoader] = useState(false);
@@ -63,25 +86,27 @@ function App() {
   }, [login, loginDetails]);
 
   return (
-    <UserContext.Provider value={loginDetails}>
-      <Router basename="/astrologer">
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<h1>Comming Soon</h1>} />
-          </Routes>
-        </Layout>
-      </Router>
-      <Backdrop
-        sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
-        open={loader}
-        onClick={() => {}}
-      >
-        <CircularProgress color="inherit" />
-        <span>Loading........</span>
-      </Backdrop>
-    </UserContext.Provider>
+    <ThemeProvider theme={theme}>
+      <UserContext.Provider value={loginDetails}>
+        <Router basename="/astrologer">
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<h1>Comming Soon</h1>} />
+            </Routes>
+          </Layout>
+        </Router>
+        <Backdrop
+          sx={(theme) => ({ color: "#fff", zIndex: theme.zIndex.drawer + 1 })}
+          open={loader}
+          onClick={() => {}}
+        >
+          <CircularProgress color="inherit" />
+          <span>Loading........</span>
+        </Backdrop>
+      </UserContext.Provider>
+    </ThemeProvider>
   );
 }
 

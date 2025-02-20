@@ -3,7 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { SwipeableDrawer } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from "../App";
-
+import LoginModal from "./loginModal";
 
 function Topbar() {
     const loginDetails = useContext(UserContext);
@@ -50,6 +50,7 @@ function Topbar() {
                     </li>
                 </ul>
             </SwipeableDrawer>
+            <LoginModal loginDetails={loginDetails} viewModal={!loginDetails._currentValue.loggedIn} />
         </div>
     );
 }
