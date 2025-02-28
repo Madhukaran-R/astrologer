@@ -1,6 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { Button, Divider, TextField } from "@mui/material";
 import { UserContext } from "../App";
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 // import { useNavigate } from 'react-router-dom';
 
 
@@ -97,44 +98,44 @@ const FormA = (props) => {
       <label>New Kundli</label>
       <br />
       <TextField
-        className="input"
+        variant="outlined"
         id="demo-helper-text-misaligned"
         label="Name"
-        size="small"
+
       />
       <TextField
         className="input"
         helperText="Please select your date of birth"
         id="demo-helper-text-misaligned"
         // label="Name"
-        size="small"
+
         type="datetime-local"
       />
       <TextField
         className="input"
         id="demo-helper-text-misaligned"
         label="Place of Birth"
-        size="small"
+
       />
       <TextField
         className="input"
         id="demo-helper-text-misaligned"
         label="Language"
-        size="small"
+
       />
       <TextField
         className="input"
         id="demo-helper-text-misaligned"
         label="Gender"
-        size="small"
+
       />
       <TextField
         className="input"
         id="demo-helper-text-misaligned"
         label="Kundli Style"
-        size="small"
+
       />
-      <Button type="submit" className="a_btn">Generate Kundli</Button>
+      <Button type="submit" variant="contained" className="a_btn" endIcon={<KeyboardDoubleArrowRightIcon className="blink" />}>Generate Kundli</Button>
       {/* <Button id="form_b_btn" variant="text" onClick={() => navigate("/saved-kundli")}>Download Saved Kundli</Button> */}
     </form >
   );

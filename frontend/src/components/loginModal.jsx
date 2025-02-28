@@ -29,7 +29,7 @@ const LoginModal = (props) => {
                     <Button variant="outlined" size="small" color="black" startIcon={<FacebookIcon />}> Log in with Facebook</Button>
                 </div>
                 <p style={{ textAlign: "center" }}>OR</p>
-                <b>Log in with your email</b>
+                <b>Log in with your Mobile</b>
                 <hr />
                 <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
                     {otpSent ?

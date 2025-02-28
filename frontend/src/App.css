@@ -166,7 +166,7 @@
   gap: 20px;
   padding: 5px;
   margin: 5px;
-  height: 500px;
+  height: 600px;
 }
 
 /* need in bottom center */
@@ -183,7 +183,7 @@
 
 .cross-banner {
   height: 150px;
-  background-color: black;
+  background-color: #8a8550;
 }
 
 .swipe-up .icon {
@@ -208,7 +208,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: black;
+  background-color: #8a8550;
 }
 
 .footer-container .footer-content .footer-quick-links {
@@ -307,6 +307,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .login-modal {
+    width: 80% !important;
+  }
   .heading {
     font-size: 3.5rem;
   }
@@ -569,8 +572,8 @@
 
 .form-group input {
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  /* padding: 8px; */
+  /* box-sizing: border-box; */
 }
 
 button {

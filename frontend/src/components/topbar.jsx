@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
-import { SwipeableDrawer } from "@mui/material";
+import { Button, SwipeableDrawer } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from "../App";
 import LoginModal from "./loginModal";
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Topbar() {
     const loginDetails = useContext(UserContext);
@@ -30,8 +32,8 @@ function Topbar() {
                         <li className="menu-item" onClick={() => goto("/contact")}>Contact</li>
                         <li className="menu-item">
                             {loginDetails._currentValue.loggedIn === false ?
-                                <span onClick={loginDetails._currentValue.Login}>Login</span> :
-                                <span onClick={loginDetails._currentValue.Logout}>Logout</span>}
+                                <Button onClick={loginDetails._currentValue.Login} startIcon={<LoginIcon />} variant="contained"> Login</Button> :
+                                <Button onClick={loginDetails._currentValue.Logout} startIcon={<LogoutIcon />} variant="contained"> Logout</Button>}
                         </li>
                     </ul>
                 </div>
