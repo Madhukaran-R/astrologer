@@ -1,7 +1,13 @@
 from flask import Blueprint,jsonify,request
+from .user import createUser
+from .utils.db import DB
 
 
 API = Blueprint('api',__name__)
+# Initialize the DB connection
+DB().get_connection()
+
+API.add_url_rule('/createUser', view_func=createUser, methods=['GET','POST'])
 
 
 @API.route('/', methods=['GET'])
