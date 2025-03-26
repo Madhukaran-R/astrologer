@@ -8,6 +8,10 @@ node_modules
 # testing
 /coverage
 
+__tests__/
+__pycache__/
+*.pyc
+
 # production
 # /build
 

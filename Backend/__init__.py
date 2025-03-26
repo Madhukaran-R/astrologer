@@ -1,5 +1,5 @@
 from flask import Blueprint,jsonify,request
-from .user import createUser
+from .createKundli import generateKundli
 from .utils.db import DB
 
 
@@ -7,7 +7,7 @@ API = Blueprint('api',__name__)
 # Initialize the DB connection
 DB().get_connection()
 
-API.add_url_rule('/createUser', view_func=createUser, methods=['GET','POST'])
+API.add_url_rule('/createUser', view_func=generateKundli, methods=['POST'])
 
 
 @API.route('/', methods=['GET'])
